@@ -1,0 +1,10 @@
+*{
+    margin: 0.1em;
+    padding: 0;
+    background-color: white;
+    font-family: 'Segoe UI';
+}
+
+.app-container{
+    /* border: 2px solid red; */
+}
