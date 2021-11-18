@@ -1,29 +1,34 @@
 import React, {Component} from 'react'
 import './WriterSection.css'
-class WriterSection extends Component {
+// import axios from 'axios'
+
+class WriterSection extends Component{
     constructor(props){
-        super(props);
+        super(props)
         this.state = {
-            users: [],
+            user: [],
         }
     }
-    componentDidMount(){
-        console.log('component did mount ...');
-        this.getUsers();
+    getUser(){
+        fetch('https://reqres.in/api/users?page=2')
+            .then(res => res.json())
+            .then(json => json.data) 
+            .then(data => {
+                this.setState({user: data});
+            })
+            .catch(err => console.log("Error --> " + err));
     }
-    getUsers = async () => {
-        const res = await fetch('/api/user.json');
-        // const users = await(res.json());
-        this.setState({users: await(res.json())});
-    };
+    
+    componentDidMount(){
+        this.getUser();
+    }
     
     render(){
-        console.log(this.state.users);
         return(
             <div className='writer-container'>
                 <h1 className='writer-header'>Featured Writers</h1>
                 <div className='writer-section'>
-                    {this.state.users.map((user)=>{
+                    {this.state.user && this.state.user.map((user)=>{
                         return(
                             <div className='user-card' key={user.id}>
                                 <img src={user.avatar} alt='image_'/>
@@ -36,6 +41,7 @@ class WriterSection extends Component {
             </div>
         );
     }
+    
     
 }
 

@@ -9,11 +9,11 @@ const MiddleSection = () => {
             </div>
             <div className='col-2'>
                 <div className='card'>
-                    <p Style='color:#212197'>LOREM IPSUM</p>
+                    <p Style={'color:#212197'}>LOREM IPSUM</p>
                     <h3>Lorem Ipsum<br/>dolor sit amet</h3>
                     <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
                 </div>
-                <div class='social-links'>
+                <div className='social-links'>
                     <img src='https://i.imgur.com/ZQNUwyV.png' alt=''/>
                     <img src='https://i.imgur.com/UBrNv8i.png' alt=''/>
                     <img src='https://i.imgur.com/Z920cCD.png' alt=''/>

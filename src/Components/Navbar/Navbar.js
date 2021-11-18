@@ -3,19 +3,19 @@ import './Navbar.css'
 const Navbar = () => {
     
     return (
-        <div className='navbar-container'>
-            <div className='navbar'>
-                <h2 className='logo'>BookPod.</h2>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Podcasts</a></li>
-                    </ul>
-                </nav>
-                <img src='https://i.imgur.com/tK6C3ci.png' alt='' className='menu-icon' />
+        <>
+            <div className="nav">
+                <label htmlFor="toggle">☰</label>
+                <input type="checkbox" id='toggle' />
+                <h2>BookPod.</h2>
+                <div className="menu">
+                <a href="http://about:blank">Home</a>
+                <a href="http://about:blank">Categories</a>
+                <a href="http://about:blank">Podcasts</a>
+                </div>
             </div>
-        </div>
+            <input className='search' type="text" placeholder='Search' />
+        </>
     )
 }
 

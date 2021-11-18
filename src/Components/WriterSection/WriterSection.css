@@ -38,7 +38,7 @@
     color: white;
     text-align: center;
     padding: 5px;
-    margin: 0px;
+    margin-top: 3em;
 }
 
 @media (max-width: 580px){
@@ -49,10 +49,42 @@
         grid-template-columns: 1fr 1fr;
         font-size: 0.9em;
     }
-}
-
-@media (max-width: 425px){
     .writer-header{
         margin-top: 8em;
+    }
+}
+@media (max-width: 540px){
+    .writer-header{
+        margin-top: 10em;
+    }
+}
+@media (max-width: 500px){
+    .writer-header{
+        margin-top: 7em;
+    }
+}
+@media (max-width: 460px){
+    .writer-header{
+        margin-top: 8em;
+    }
+}
+@media (max-width: 425px){
+    .writer-header{
+        margin-top: 9em;
+    }
+}
+@media (max-width: 380px){
+    .writer-header{
+        margin-top: 10em;
+    }
+}
+@media (max-width: 360px){
+    .writer-header{
+        margin-top: 9em;
+    }
+}
+@media (max-width: 320px){
+    .writer-header{
+        margin-top: 10em;
     }
 }

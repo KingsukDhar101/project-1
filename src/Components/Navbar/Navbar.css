@@ -1,69 +1,103 @@
-.navbar-container{
-    min-height: 10vh;
-    width: 100%;
-    /* border: 1px solid gray; */
-    padding-left: 1%;
-    padding-right: 1%;
-    box-sizing: border-box;
-    overflow: hidden;
+*{margin: 0; padding: 0;}
+.nav{
+  /* border-bottom: 1px solid #ccc; */
+  text-align: left;
+  height: 4em;
+  line-height: 4em;
+  font-family: 'Lato', sans-serif;
 }
-.navbar{
-    width: 100%;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+.nav h2{
+  display: inline-block;
+  margin-left: 1em;
 }
-.logo{
-    width: 5em;
-    margin: 0.2em 0;
-    border: 1px solid gray;
+.menu{
+  margin: 0 0 0 40px;
+  display: inline-block;
+  padding: 0;
+  width: 60%;
+  font-weight: 800;
+}
+.menu a{
+  text-decoration: none;
+  color: black;
+  margin: 0 auto;
+  line-height: 4em;
+  padding: 0 1.4em;
+  text-align: center;
+}
+
+label{
+  margin: 0 0 0 15px;
+  font-size: 1.3em;
+  line-height: 3.1em;
+  display: none;
+  width: 1em;
+  float: left;
+}
+#toggle{
+  display: none;
+}
+input.search{
+  border: 1px solid #ccc;
+  width: 3em;
+  position: absolute;
+  left: 80%;
+  top: 3%;
+  padding: 3px 4px;
+  border-radius: 10px;
+}
+@media (max-width:680px){
+  .nav{
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 530px){
+  label{
+    display: block;
+    cursor: pointer;
+    margin-left: 0;
+    font-size: 1.3em;
+    padding: 0 8px;
+  }
+  .menu{
     text-align: center;
-}
-.menu-icon{
-    /* border: 1px solid green; */
-    width: 3em;
-    cursor: pointer;
-}
-
-nav{
-    /* border: 1px solid red; */
-    text-align: right;
-}
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-right: 0.5em;
-}
-nav ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin: 0.1em 1em;
-    padding: 0.1em 0.1em;
-}
-nav ul li a:hover{
-    background-color: rgba(127, 255, 212, 0.226);
-    border-radius: 5px;
-}
-
-
-@media screen and (max-width: 630px){
-    nav ul li a{
-        margin: 0.3em;
-    }
-    .navbar-container{
-        font-size: 0.7em;
-    }
-}
-@media screen and (max-width: 425px){
-    .logo{
-        margin: 0.2em auto; 
-    }
-    nav ul {
-        display: none;
-    }
+    width: 100%;
+    display: none;
+    margin: 0;
     
+  }
+  .menu a {
+    border-bottom: 1px solid #ccc;
+    display: block;
+    margin: 0;
+    
+  }
+  .menu a:hover{
+    background-color: #ccffcc;
+    border-radius: 10em;
+  }
+  
+  .nav h2{
+    /* background-color: yellow; */
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+ 
+  #toggle:checked ~ .menu{
+    display: block;
+    z-index: 10;
+  }
 }
-   
-   
+
+
+
+
+
+
+
+
+
+
+
